@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        
+        <title>ShowMeStats</title>
+        
+        <!-- Style sheets -->
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.8.17/themes/blitzer/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="chosen.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.tag.css" />
+        
+        <!-- JQuery Runtime -->
+        <script src="http://code.jquery.com/jquery.js" type="text/javascript" charset="utf8"></script>
+        <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.js" type="text/javascript" charset="utf8"></script>
+        <script src="chosen.jquery.js" type="text/javascript" charset="utf8"></script>
+        <script src="jquery.tag.js" type="text/javascript" charset="utf8"></script>
+        
+        <!-- Application runtime -->
+        <script type="text/javascript" src="json2.js"></script>
+        <script type="text/javascript" src="riak.js"></script>
+        <script type="text/javascript" src="riak.patch.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+
+    </head>
+    
+    <body>
+        <div class="outerContainer">
+            <div class="requestForm">
+                <div class="formLayout">
+                    <form>
+                        
+                        <label class="default">Inputs</label>
+                        <select class="chozen" data-placeholder="Choose a Bucket..." tabindex="1" id="buckets">
+                            <option value=""></option>
+                        </select>
+                        
+                        <label class="default">Indexes</label>
+                        <div class="chzn-container-multi"><ul class="chzn-choices"><li class="search-field">
+                            <input class="advtext" id="secondaryIndex" placeholder="Type an Index..." />
+                        </li></ul></div>
+                        <div class="chzn-container-multi"><ul class="chzn-choices">
+                            <li class="search-field"><input class="advtext" id="secondaryIndexValue" placeholder="Type an Index Key..." />
+                        </li></ul></div>
+                        
+                        <label class="default">Timespan</label>
+                        <div class="chzn-container-multi" style="float: left; width: 50%"><ul class="chzn-choices"><li class="search-field">
+                            <input class="advtext" id="lowerBound" placeholder="Type a low bound..." />
+                        </li></ul></div>
+                        <div class="chzn-container-multi"><ul class="chzn-choices">
+                            <li class="search-field"><input class="advtext" id="higherBound" placeholder="Type a high bound..." />
+                        </li></ul></div>
+                        
+                        <label class="default">Fields</label>
+                        <div class="chzn-container-multi"><ul class="chzn-choices"><li class="search-field"><input class="advtext tagged" id="fields" /></li></ul></div>
+                        
+                    </form>
+                </div>
+                <div class="previewLayout">
+                    <label class="default">Preview</label>
+                    <textarea class="preview code" id="preview"></textarea>
+                </div>
+                <div class="bottomToolbar"><button type="button" id="submit">Go</button></div>
+            </div>
+            <div class="header">
+                <div class="expander">&nbsp;</div>
+                <div class="caption">ShowMeStats</div>
+            </div>
+            <div class="chartContainer">
+                Something below
+            </div>
+        </div>
+    </body>
+    
+</html>

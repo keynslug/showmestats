@@ -1,0 +1,48 @@
+.taglist {
+    border-style: hidden;
+    border-width: 1px;
+    padding: 3px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 13px;
+    cursor: text;
+}
+
+.taglist li.tag {
+    background: none repeat scroll 0 0 #EEEEEE;
+    list-style: none;
+    float: left;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid #CCCCCC;
+    cursor: default;
+    padding: 1px 2px 1px 4px;
+    margin: 4px 5px 0 0;
+}
+
+.taglist li.input {
+    list-style: none;
+    float:left;
+}
+
+.taglist li.input input {
+    border: medium none;
+    cursor: default;
+    margin: 0;
+    outline: 0 none;
+    padding: 3px 0 2px;
+    width: 150px;
+}
+
+.taglist li.tag a.delete span {
+    visibility: hidden;
+}
+
+.taglist li.tag a.delete {
+    background: url("to-delete.png") no-repeat 5px 5px;
+    width: 8px;
+    height: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
