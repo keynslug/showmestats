@@ -4,25 +4,25 @@ echo '[*] uses curl for uploading files'
 #hostname
 echo -n '[cfg] riak hostname (localhost):'
 read riakhostname
-if [ -n riakhostname ]; then 
+if [ -z "$riakhostname" ]; then 
   riakhostname='localhost' 
 fi
 #port
 echo -n '[cfg] riak port (8098):'
 read riakport
-if [ -n riakport ]; then 
-  riakport='8098' 
+if [ -z "$riakport" ]; then
+  riakport='8098'
 fi
 #location
 echo -n '[cfg] riak location (riak):'
 read riaklocation
-if [ -n riaklocation ]; then 
-  riaklocation='riak' 
+if [ -z "$riaklocation" ]; then 
+  riaklocation='riak'
 fi
 #bucket
 echo -n '[cfg] riak-browser bucket (riak-browser):'
 read riaktargetbucket
-if [ -n riaktargetbucket ]; then 
+if [ -z "$riaktargetbucket" ]; then 
   riaktargetbucket='client' 
 fi
 #index
